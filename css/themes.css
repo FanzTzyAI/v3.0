@@ -1,0 +1,40 @@
+/* DARK THEME */
+
+[data-theme="dark"] {
+    --bg: #080b16;
+    --surface: #111827;
+    --surface-2: #1b263b;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+}
+
+/* LIGHT THEME */
+
+[data-theme="light"] {
+    --bg: #eef2ff;
+    --surface: #ffffff;
+    --surface-2: #e2e8f0;
+    --text: #111827;
+    --muted: #64748b;
+    --border: rgba(0,0,0,.12);
+}
+
+[data-theme="light"] #desktop-header {
+    background: rgba(255,255,255,.7);
+}
+
+[data-theme="light"] #taskbar {
+    background: rgba(255,255,255,.9);
+}
+
+[data-theme="light"] #start-menu,
+[data-theme="light"] #notification-center,
+[data-theme="light"] #control-center {
+    background: rgba(255,255,255,.97);
+    color: #111827;
+}
+
+[data-theme="light"] .window-header {
+    background: #e2e8f0;
+    color: #111827;
+}
