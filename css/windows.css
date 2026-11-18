@@ -107,3 +107,93 @@
     min-height: 120px;
     resize: vertical;
   }
+
+.app-placeholder {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 25px;
+}
+
+.placeholder-icon {
+    font-size: 55px;
+}
+
+.app-placeholder h2 {
+    margin: 0;
+}
+
+.app-placeholder p {
+    opacity: 0.65;
+}
+
+.window-controls button {
+    cursor: pointer;
+}
+
+.window-controls button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.app-window.minimized {
+    display: none;
+}
+
+.app-window.maximized {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: calc(100% - 65px) !important;
+    border-radius: 0 !important;
+}
+
+.start-app-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.start-app-item:hover {
+    background: rgba(128, 128, 128, 0.2);
+}
+
+.start-app-item span:first-child {
+    font-size: 22px;
+}
+
+.taskbar-app-button {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 8px;
+    background: rgba(128, 128, 128, 0.2);
+    color: inherit;
+    cursor: pointer;
+}
+
+.notification-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background: rgba(128, 128, 128, 0.12);
+}
+
+.notification-item p {
+    margin: 6px 0;
+}
+
+.notification-item small {
+    opacity: 0.6;
+    }
