@@ -1,0 +1,251 @@
+/* =========================
+   MOBILE PORTRAIT
+========================= */
+
+@media screen and (max-width: 600px)
+and (orientation: portrait) {
+
+    :root {
+        --taskbar-height: 58px;
+    }
+
+    .desktop-header {
+        height: 42px;
+        padding: 0 12px;
+    }
+
+    .desktop-brand {
+        font-size: 12px;
+    }
+
+    .desktop-status {
+        gap: 8px;
+        font-size: 10px;
+    }
+
+    #desktop-icons {
+        top: 60px;
+        left: 8px;
+        right: 8px;
+
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .desktop-icon {
+        width: 100%;
+        min-height: 85px;
+    }
+
+    .desktop-icon span {
+        font-size: 26px;
+    }
+
+    .desktop-icon p {
+        font-size: 10px;
+    }
+
+    #taskbar {
+        padding: 5px 8px;
+        gap: 5px;
+    }
+
+    #start-button {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    #taskbar-apps {
+        gap: 4px;
+    }
+
+    #taskbar-apps button {
+        min-width: 34px;
+        height: 36px;
+    }
+
+    .taskbar-right {
+        gap: 2px;
+    }
+
+    .taskbar-right button {
+        width: 30px;
+        height: 35px;
+    }
+
+    #taskbar-clock {
+        font-size: 10px;
+    }
+
+    #start-menu {
+        left: 8px;
+        right: 8px;
+        bottom: 65px;
+        width: auto;
+        max-height: 75%;
+    }
+
+    #notification-center,
+    #control-center {
+        left: 8px;
+        right: 8px;
+        bottom: 65px;
+        width: auto;
+        max-height: 75%;
+        overflow-y: auto;
+    }
+
+    .app-window {
+        top: 42px !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: calc(100% - 100px) !important;
+        border-radius: 12px;
+    }
+
+    .window-header {
+        cursor: default;
+    }
+}
+
+/* =========================
+   MOBILE LANDSCAPE
+========================= */
+
+@media screen and (max-height: 500px)
+and (orientation: landscape) {
+
+    :root {
+        --taskbar-height: 48px;
+    }
+
+    .desktop-header {
+        height: 36px;
+        padding: 0 12px;
+    }
+
+    #desktop-icons {
+        top: 45px;
+        left: 8px;
+        grid-template-columns: repeat(2, 75px);
+        gap: 3px;
+    }
+
+    .desktop-icon {
+        min-height: 62px;
+    }
+
+    .desktop-icon span {
+        font-size: 21px;
+    }
+
+    .desktop-icon p {
+        font-size: 9px;
+    }
+
+    #taskbar {
+        padding: 3px 10px;
+    }
+
+    #start-button {
+        height: 36px;
+        width: 38px;
+    }
+
+    #taskbar-apps button {
+        height: 34px;
+    }
+
+    #start-menu {
+        bottom: 53px;
+        max-height: 78%;
+    }
+
+    #notification-center,
+    #control-center {
+        bottom: 53px;
+        max-height: 78%;
+    }
+
+    .app-window {
+        top: 36px !important;
+        left: 75px !important;
+        width: calc(100% - 85px) !important;
+        height: calc(100% - 84px) !important;
+    }
+
+    .window-header {
+        height: 38px;
+        min-height: 38px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width: 601px)
+and (max-width: 1024px) {
+
+    #desktop-icons {
+        grid-template-columns: repeat(2, 90px);
+    }
+
+    .app-window {
+        width: 85%;
+        height: 80%;
+    }
+
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media screen and (min-width: 1025px) {
+
+    #desktop-icons {
+        grid-template-columns: repeat(1, 90px);
+    }
+
+    .app-window {
+        min-width: 350px;
+        min-height: 250px;
+    }
+
+}
+
+/* =========================
+   SHORT SCREENS
+========================= */
+
+@media screen and (max-height: 350px) {
+
+    .desktop-icon {
+        min-height: 52px;
+    }
+
+    .desktop-icon span {
+        font-size: 18px;
+    }
+
+    .desktop-icon p {
+        font-size: 8px;
+    }
+
+}
+
+/* TOUCH DEVICE */
+
+@media (hover: none) {
+
+    .desktop-icon:hover {
+        background: transparent;
+    }
+
+    .desktop-icon:active {
+        background: rgba(255,255,255,.15);
+    }
+
+      }
