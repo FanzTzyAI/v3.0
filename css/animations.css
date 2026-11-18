@@ -1,0 +1,63 @@
+/* BOOT ANIMATION */
+
+@keyframes bootProgress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.boot-progress {
+    animation: bootProgress 2.5s ease forwards;
+}
+
+/* FADE */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.app-window,
+#start-menu,
+#notification-center,
+#control-center {
+    animation: fadeIn .2s ease;
+}
+
+/* LOGO */
+
+@keyframes logoGlow {
+    0%,100% {
+        box-shadow: 0 0 10px rgba(99,102,241,.2);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(6,182,212,.7);
+    }
+}
+
+.boot-logo {
+    animation: logoGlow 2s infinite;
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+      }
