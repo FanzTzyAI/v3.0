@@ -38,3 +38,11 @@
     background: #e2e8f0;
     color: #111827;
 }
+
+[data-theme="light"] .desktop-header {
+    color: #222;
+}
+
+[data-theme="dark"] .desktop-header {
+    color: #fff;
+}
