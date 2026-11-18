@@ -1,0 +1,109 @@
+/* APPLICATION WINDOW */
+
+.app-window {
+    position: absolute;
+
+    top: 8%;
+    left: 10%;
+
+    width: min(700px,80%);
+    height: min(500px,80%);
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(17,24,39,.97);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 15px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+
+    overflow: hidden;
+}
+
+.window-header {
+    height: 48px;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: #1b263b;
+    border-bottom: 1px solid var(--border);
+
+    cursor: grab;
+    touch-action: none;
+}
+
+.window-title {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.window-controls button {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: rgba(255,255,255,.08);
+}
+
+.window-controls button:hover {
+    background: var(--primary);
+}
+
+.window-controls .close-window:hover {
+    background: #ef4444;
+}
+
+.window-content {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    padding: 18px;
+}
+
+.app-window.maximized {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0;
+}
+
+.app-window.minimized {
+    display: none;
+}
+
+.app-window.active {
+    border-color: rgba(99,102,241,.7);
+    z-index: 20;
+}
+
+.window-content button {
+    padding: 10px 13px;
+    border-radius: 9px;
+    background: var(--primary);
+    color: white;
+}
+
+.window-content input,
+.window-content textarea {
+    width: 100%;
+    padding: 11px;
+    margin: 8px 0;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--surface);
+}
+
+.window-content textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
