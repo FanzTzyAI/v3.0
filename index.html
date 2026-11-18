@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="theme-color" content="#080b16">
+    <meta name="description"
+          content="FANZ OS 3.0 - Smart. Modern. Powerful.">
+
+    <title>FANZ OS 3.0</title>
+
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" href="./assets/icons/icon-192.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+    <link rel="stylesheet" href="./css/windows.css">
+    <link rel="stylesheet" href="./css/themes.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+
+<!-- BOOT SCREEN -->
+<div id="boot-screen">
+    <div class="boot-content">
+        <div class="boot-logo">F</div>
+
+        <h1>FANZ OS</h1>
+        <p>Next Generation Operating System</p>
+
+        <div class="boot-loader">
+            <div class="boot-progress"></div>
+        </div>
+
+        <span id="boot-status">Initializing system...</span>
+    </div>
+</div>
+
+<!-- LOGIN SCREEN -->
+<div id="login-screen" class="hidden">
+
+    <div class="login-container">
+
+        <div class="login-logo">F</div>
+
+        <h1>Welcome Back</h1>
+        <p>Sign in to FANZ OS</p>
+
+        <input
+            type="text"
+            id="login-username"
+            placeholder="Username"
+            autocomplete="username"
+        >
+
+        <input
+            type="password"
+            id="login-password"
+            placeholder="Password"
+            autocomplete="current-password"
+        >
+
+        <button id="login-button">
+            Sign In
+        </button>
+
+        <p id="login-error"></p>
+
+    </div>
+</div>
+
+<!-- DESKTOP -->
+<main id="desktop" class="hidden">
+
+    <!-- WALLPAPER -->
+    <div id="wallpaper"></div>
+
+    <!-- DESKTOP HEADER -->
+    <header class="desktop-header">
+
+        <div class="desktop-brand">
+            <span class="brand-icon">F</span>
+            <span>FANZ OS</span>
+        </div>
+
+        <div class="desktop-status">
+            <span id="network-status">● Online</span>
+            <span id="desktop-clock">00:00</span>
+        </div>
+
+    </header>
+
+    <!-- DESKTOP ICONS -->
+    <section id="desktop-icons">
+
+        <button class="desktop-icon" data-app="ai">
+            <span>🤖</span>
+            <p>Fanz AI</p>
+        </button>
+
+        <button class="desktop-icon" data-app="files">
+            <span>📁</span>
+            <p>File Manager</p>
+        </button>
+
+        <button class="desktop-icon" data-app="browser">
+            <span>🌐</span>
+            <p>Browser</p>
+        </button>
+
+        <button class="desktop-icon" data-app="notes">
+            <span>📝</span>
+            <p>Notes</p>
+        </button>
+
+        <button class="desktop-icon" data-app="music">
+            <span>🎵</span>
+            <p>Music</p>
+        </button>
+
+        <button class="desktop-icon" data-app="settings">
+            <span>⚙️</span>
+            <p>Settings</p>
+        </button>
+
+        <button class="desktop-icon" data-app="games">
+            <span>🎮</span>
+            <p>Gaming Center</p>
+        </button>
+
+        <button class="desktop-icon" data-app="calculator">
+            <span>🧮</span>
+            <p>Calculator</p>
+        </button>
+
+    </section>
+
+    <!-- APPLICATION WINDOWS -->
+    <section id="window-container"></section>
+
+    <!-- START MENU -->
+    <div id="start-menu" class="hidden">
+
+        <div class="start-header">
+            <h2>FANZ OS</h2>
+            <span>3.0</span>
+        </div>
+
+        <input
+            type="search"
+            id="app-search"
+            placeholder="Search applications..."
+        >
+
+        <div id="start-app-list"></div>
+
+        <div class="start-footer">
+            <button id="profile-button">👤 Profile</button>
+            <button id="power-button">⏻ Power</button>
+        </div>
+
+    </div>
+
+    <!-- NOTIFICATION CENTER -->
+    <aside id="notification-center" class="hidden">
+
+        <h3>Notifications</h3>
+
+        <div id="notification-list">
+            <p>No notifications</p>
+        </div>
+
+        <button id="clear-notifications">
+            Clear All
+        </button>
+
+    </aside>
+
+    <!-- CONTROL CENTER -->
+    <aside id="control-center" class="hidden">
+
+        <h3>Control Center</h3>
+
+        <button id="toggle-theme">🌙 Dark Mode</button>
+        <button id="toggle-fullscreen">⛶ Fullscreen</button>
+        <button id="toggle-wifi">🌐 Network</button>
+
+    </aside>
+
+    <!-- TASKBAR -->
+    <footer id="taskbar">
+
+        <button id="start-button">
+            <span>⊞</span>
+        </button>
+
+        <div id="taskbar-apps"></div>
+
+        <div class="taskbar-right">
+
+            <button id="notification-button">
+                🔔
+            </button>
+
+            <button id="control-button">
+                ⚙
+            </button>
+
+            <div id="taskbar-clock">
+                <span id="taskbar-time">00:00</span>
+                <small id="taskbar-date"></small>
+            </div>
+
+        </div>
+
+    </footer>
+
+</main>
+
+<!-- POWER MENU -->
+<div id="power-menu" class="hidden">
+
+    <div class="power-content">
+
+        <h2>Power Options</h2>
+
+        <button id="restart-button">
+            🔄 Restart
+        </button>
+
+        <button id="shutdown-button">
+            ⏻ Shutdown
+        </button>
+
+        <button id="cancel-power">
+            Cancel
+        </button>
+
+    </div>
+
+</div>
+
+<!-- APP SCRIPTS -->
+<script type="module" src="./js/core/app.js"></script>
+
+</body>
+  </html>
