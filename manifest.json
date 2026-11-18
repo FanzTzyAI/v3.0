@@ -1,0 +1,30 @@
+{
+    "name": "FANZ OS 3.0",
+    "short_name": "FANZ OS",
+    "description": "Smart Modern Powerful Operating System",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "any",
+    "background_color": "#080b16",
+    "theme_color": "#080b16",
+    "categories": [
+        "utilities",
+        "productivity",
+        "education"
+    ],
+    "icons": [
+        {
+            "src": "./assets/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./assets/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+        }
