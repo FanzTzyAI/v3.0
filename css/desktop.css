@@ -1,0 +1,52 @@
+/* DESKTOP LAYOUT */
+
+#desktop {
+    isolation: isolate;
+}
+
+#desktop-icons {
+    user-select: none;
+}
+
+.desktop-icon:active {
+    transform: scale(.94);
+}
+
+#window-container {
+    inset: 48px 0 var(--taskbar-height);
+    z-index: 5;
+    pointer-events: none;
+}
+
+#window-container > * {
+    pointer-events: auto;
+}
+
+.desktop-header {
+    user-select: none;
+}
+
+#desktop-icons {
+    touch-action: pan-y;
+}
+
+#taskbar {
+    user-select: none;
+}
+
+#taskbar-apps button.active {
+    background: rgba(99,102,241,.35);
+    border-bottom: 2px solid var(--secondary);
+}
+
+@media (min-width: 768px) {
+    #desktop-icons {
+        grid-template-columns: repeat(2, 80px);
+    }
+}
+
+@media (min-width: 1200px) {
+    #desktop-icons {
+        grid-template-columns: repeat(1, 90px);
+    }
+}
